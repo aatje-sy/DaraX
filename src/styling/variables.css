@@ -1,0 +1,31 @@
+:root{
+    /* Colors */
+    --primary-color: #FFFFFF;
+    --secondary-color: #007A3D;
+    --tertiary-color: #000000;
+
+    /* Font colors */
+    --text-light-color: #FFFFFF;
+    --text-dark-color: #000000;
+    --text-special-color: #007A3D;
+
+    /* Buttons Styling */
+    --button-default-color: #FFFFFF;
+    --button-defult-text-color: #000000;
+    --button-hover-color: #007A3D;
+    --button-hover-text-color: #007A3D;
+
+    /* Font Sizes */
+    --font-small: 12px;
+    --font-medium: 14px;
+    --font-large: 16px;
+    --font-xl: 20px;
+    --font-xxl: 24px;
+    --logo-size: 1.8rem;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-xl: 32px;
+}

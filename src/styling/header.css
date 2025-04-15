@@ -1,0 +1,31 @@
+header{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+}
+h1{
+    color: var(--tertiary-color);
+}
+a{
+    text-decoration: none;
+    color: var(--text-dark-color);
+}
+a:hover{
+    color: var(--button-hover-color);
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-content: center;
+    font-size: var(--font-xxl);
+}
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50vw;
+    font-size: var(--font-xl);
+}
