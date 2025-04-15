@@ -1,6 +1,5 @@
-import log from "eslint-plugin-react/lib/util/log.js";
-
-const CoinCard = ({ coin, addFavCoin }) => {
+const CoinCard = ({ coin, toggleFavCoin, favoriteList }) => {
+    const isFavorite = favoriteList.some(fav => fav.ID === coin.ID);
 
     return (
         <tr key={coin.ID}>
@@ -12,9 +11,8 @@ const CoinCard = ({ coin, addFavCoin }) => {
             <td>${parseFloat(coin.CIRCULATING_MKT_CAP_USD).toLocaleString()}</td>
             <td>${parseFloat(coin.SPOT_MOVING_24_HOUR_QUOTE_VOLUME_USD).toLocaleString()}</td>
             <td>
-                <button onClick={addFavCoin}>
-                    add
-                    {console.log(addFavCoin)}
+                <button onClick={() => toggleFavCoin(coin)}>
+                    {isFavorite ? "💔 Unfavorite" : "❤️ Favorite"}
                 </button>
             </td>
         </tr>

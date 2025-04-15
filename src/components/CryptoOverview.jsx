@@ -9,15 +9,19 @@ function Market() {
     const [favoriteCoin, setFavoriteCoin] = useState([])
 
 
-   /* const addFavoriteCoin = (coin) => {
-        const favoriteExist = favoriteCoin.some(fav => fav === coin)
+    const toggleFavoriteCoin = (coin) => {
+        const isFavorite = favoriteCoin.some(fav => fav.ID === coin.ID);
 
-        if (!favoriteExist) {
-            const newFavCoin = [...favoriteCoin, coin];
-            setFavoriteCoin(newFavCoin);
-            console.log(favoriteCoin);
+        if (isFavorite) {
+            const updatedFavs = favoriteCoin.filter(fav => fav.ID !== coin.ID);
+            setFavoriteCoin(updatedFavs);
+            console.log("Verwijderd uit favorieten:", coin.NAME);
+        } else {
+            setFavoriteCoin([...favoriteCoin, coin]);
+            console.log("Toegevoegd aan favorieten:", coin.NAME);
         }
-    }*/
+    };
+
 
     useEffect(() => {
         fetch("https://data-api.coindesk.com/asset/v1/top/list?page=1&page_size=100")
@@ -41,9 +45,11 @@ function Market() {
                     <p>Past 24 hrs</p>
                     <ul>
                         {
-                            <li>
-
-                            </li>
+                            coins.slice(0, 10).map((coin) => (
+                                <li key={coin.ID}>
+                                    {coin.NAME} ({coin.SYMBOL}) — ${parseFloat(coin.PRICE_USD).toFixed(2)}
+                                </li>
+                            ))
                         }
                     </ul>
                 </div>
@@ -71,7 +77,7 @@ function Market() {
                 <tbody>
                 {
                     coins.map((coin) => (
-                        <CoinCard key={coin.ID} coin={coin} />
+                        <CoinCard key={coin.ID} coin={coin} toggleFavCoin={toggleFavoriteCoin} favoriteList={favoriteCoin} />
 
                     ))
                 }
