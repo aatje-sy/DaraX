@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const CoinCard = ({ coin, toggleFavCoin, favoriteList }) => {
     const isFavorite = favoriteList.some(fav => fav.ID === coin.ID);
 

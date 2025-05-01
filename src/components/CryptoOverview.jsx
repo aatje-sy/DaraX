@@ -1,6 +1,8 @@
 import {useEffect, useState} from "react";
 import CoinCard from "./CoinCard.jsx";
 import FavoriteCoinList from "./FavoriteCoinList.jsx";
+import TopTenList from "./TopTenList.jsx";
+
 
 function Market() {
 
@@ -39,21 +41,7 @@ function Market() {
 
                 <FavoriteCoinList FavoriteCoin={favoriteCoin}></FavoriteCoinList>
 
-
-                <div className={"CryptoOverviewContainers"}>
-                    <h1>Top 10</h1>
-                    <p>Past 24 hrs</p>
-                    <ul>
-                        {
-                            coins.slice(0, 10).map((coin) => (
-                                <li key={coin.ID}>
-                                    {coin.NAME} ({coin.SYMBOL}) — ${parseFloat(coin.PRICE_USD).toFixed(2)}
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-
+                <TopTenList coins={coins} />
 
                 <div className={"CryptoOverviewContainers"}>
 
