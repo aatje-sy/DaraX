@@ -11,6 +11,9 @@ body {
     font-family: 'Inder', sans-serif;
     background-color: var(--primary-color);
 }
+.flex{
+    display: flex;
+}
 section{
     width: 90%;
     display: flex;
@@ -86,11 +89,18 @@ tbody tr:hover {
 .top-ten-list li:hover {
     background-color: #f5f5f5;
 }
-.positive {
-    color: green;
-    font-weight: bold;
+.CoinDetails-Container{
+    padding: 10px;
+    width: 50%;
 }
-.negative {
-    color: red;
-    font-weight: bold;
+.Coin-title-container{
+    align-items: center;
 }
+.Details-Container{
+    padding-left: 15px;
+    margin-top: 10px;
+}
+.Coin-Chart-Container{
+
+}
+

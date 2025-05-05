@@ -22,4 +22,3 @@ const TopTenItem = ({ coin }) => {
 };
 
 export default TopTenItem;
-e

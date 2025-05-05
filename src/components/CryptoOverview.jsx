@@ -52,7 +52,6 @@ function Market() {
             <table>
                 <thead>
                     <tr>
-                        <th></th>
                         <th>#</th>
                         <th>Name</th>
                         <th>Price</th>
