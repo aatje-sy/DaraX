@@ -10,7 +10,7 @@ function Header() {
 
                 <div className={"nav-links"}>
                     <Link to="/">Wallet</Link>
-                    <Link to="/crypto_Overview">Market</Link>
+                    <Link to="/Crypto_Market">Market</Link>
                     <Link to="/Contact">Contact</Link>
                 </div>
 

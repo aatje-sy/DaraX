@@ -65,6 +65,15 @@ tbody tr:hover {
     border-radius: 50%;
     opacity: 1 !important;
 }
+.search-bar-container{
+    width: 50%;
+    margin-left: 25px;
+    padding-bottom: 10px;
+}
+.Search-Bar{
+    height: 30px;
+    width: 350px;
+}
 
 /* Top ten past 24 */
 .top-ten-list {
@@ -100,7 +109,3 @@ tbody tr:hover {
     padding-left: 15px;
     margin-top: 10px;
 }
-.Coin-Chart-Container{
-
-}
-
